@@ -38,3 +38,5 @@ C:\Users\Alexander\source\repos\Game3\Game3\obj\Debug\net6.0-windows\ref\Game3.d
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\charaset.xnb
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\back_1.xnb
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\charaset-2.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\obj\Debug\net6.0-windows\Game3.sourcelink.json
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\Pillar_01.xnb

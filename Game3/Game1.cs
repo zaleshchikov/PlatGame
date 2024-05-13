@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Collections.Generic;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace Game3
@@ -10,13 +12,17 @@ namespace Game3
         private GraphicsDeviceManager _graphics;
         private Microsoft.Xna.Framework.Graphics.SpriteBatch _spriteBatch;
         Texture2D charaset;
+        Texture2D pillar;
         Texture2D background;
         Vector2 position;
+        Vector2 Pillarposition;
         float timer;
         byte direction;
         int threshold;
         float speed = 2f;
+        List<Rectangle> Pillarpositions;
         Rectangle[] sourceRectangles;
+        Rectangle playerRect;
         double verticalSpeed = 0;
         double g = 9.8;
         int _width;
@@ -53,9 +59,15 @@ namespace Game3
         {
             _spriteBatch = new Microsoft.Xna.Framework.Graphics.SpriteBatch(GraphicsDevice);
             charaset = Content.Load < Texture2D> ("charaset");
+            pillar = Content.Load<Texture2D>("Pillar_01");
             background = Content.Load<Texture2D>("back_1");
-
             SetFullscreen();
+            Pillarpositions = new List<Rectangle>();
+            for (int i = 0; i < 6; i++)
+            {
+                Pillarpositions.Add(new Rectangle(_width/3*(i+1), _height * 2-_height/6*i,  pillar.Width, pillar.Height));
+            }
+            Pillarposition = new Vector2(200, _height * 2);
             timer = 0;
             direction = 0;
             threshold = 250;
@@ -78,11 +90,12 @@ namespace Game3
             KeyboardState keyboardState = Keyboard.GetState();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
             var prevPosition = position;
-            if (keyboardState.IsKeyDown(Keys.Left)) {
+            if (keyboardState.IsKeyDown(Keys.Left) &&!TouchedRight()) {
                 direction = 3;
                 position.X -= speed; }
-            if (keyboardState.IsKeyDown(Keys.Right)) {
+            if (keyboardState.IsKeyDown(Keys.Right) && !TouchedLeft()) {
                 direction = 0;
                  position.X += speed; }
             if (keyboardState.IsKeyDown(Keys.Up))
@@ -90,23 +103,29 @@ namespace Game3
                 if (verticalSpeed == 0.0)
                 {
                     _isJumped = true;
-                    verticalSpeed = -5f;
+                    verticalSpeed = -2f;
                 }
             }
-            if (keyboardState.IsKeyDown(Keys.Down) && position.Y <= _height * 2)
-                position.Y += speed*3;
-
-
-            if (position.Y <= _height * 2 || _isJumped)
+            if (keyboardState.IsKeyDown(Keys.Down) && position.Y <= _height * 2 &&!TouchedTop())
             {
-                verticalSpeed += g * 0.01;
-                position.Y += (float)(verticalSpeed);
-                if (position.Y >= _height * 2)
+                //position.Y += speed * 3;
+            }
+
+            if ((position.Y <= _height * 2 || _isJumped))
+            {
+                if(TouchedTop())System.Diagnostics.Debug.WriteLine(TouchedTop());
+                if (!TouchedTop())
+                {
+                    verticalSpeed += g * 0.001;
+                }
+                if ((!TouchedTop() || verticalSpeed <= 0)) { position.Y += (float)(verticalSpeed); }
+                if (position.Y >= _height * 2 || TouchedTop())
                 {
                     _isJumped = false;
                     verticalSpeed = 0.0;
                 }
             }
+
             if (timer > threshold && position.X == prevPosition.X)
             {
                 currentAnimationIndex = (byte)(1 + direction);
@@ -140,6 +159,14 @@ namespace Game3
                 }
 
                 // Reset the timer.
+                if (position.X < 0)
+                    position.X = 0;
+                if (position.Y < 0)
+                    position.Y = 0;
+                if (position.X > _width * 2.5)
+                    position.X = _width * 2.5f;
+                if (position.Y > _height * 2)
+                    position.Y = _height * 2;
                 timer = 0;
             }
             // If the timer has not reached the threshold, then add the milliseconds that have past since the last Update() to the timer.
@@ -148,7 +175,60 @@ namespace Game3
                 timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             }
 
+
+            playerRect = new Rectangle((int)position.X, (int)position.Y, 48, 64);
             base.Update(gameTime);
+        }
+
+
+
+        protected bool TouchedLeft()
+        {
+            foreach (var pillarRect in Pillarpositions)
+            {
+                if(playerRect.Right == pillarRect.Left && playerRect.Bottom >= pillarRect.Top && playerRect.Bottom <= pillarRect.Bottom)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        protected bool TouchedRight()
+        {
+            foreach (var pillarRect in Pillarpositions)
+            {
+                if (playerRect.Left == pillarRect.Right && playerRect.Bottom >= pillarRect.Top && playerRect.Bottom <= pillarRect.Bottom)
+                {
+                    return true;
+                }
+            }
+            return false;
+
+        }
+
+        protected bool TouchedTop()
+        {
+            foreach (var pillarRect in Pillarpositions)
+            {
+                if (playerRect.Bottom == pillarRect.Top && playerRect.Right >= pillarRect.Left && playerRect.Left <= pillarRect.Right)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        protected bool TouchedBottom()
+        {
+            foreach (var pillarRect in Pillarpositions)
+            {
+                if (playerRect.Top == pillarRect.Bottom && playerRect.Right >= pillarRect.Left && playerRect.Left <= pillarRect.Right)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         protected override void Draw(GameTime gameTime)
@@ -159,7 +239,10 @@ namespace Game3
             Rectangle sourceRectangle = new Rectangle(0, 0, 48, 64);
             _spriteBatch.Draw(background, new Vector2(0, 0), Color.White);
             _spriteBatch.Draw(charaset, position, sourceRectangles[currentAnimationIndex], Color.White);
-
+            foreach (var pos in Pillarpositions)
+            {
+                _spriteBatch.Draw(pillar, pos, Color.White);
+            }
             _spriteBatch.End();
 
             base.Draw(gameTime);
