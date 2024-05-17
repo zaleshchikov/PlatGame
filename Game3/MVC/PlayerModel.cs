@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Game3.MVC
 {
-    internal class PlayerModel
+    public class PlayerModel
     {
-        Vector2 position;
-        byte direction;
-        Rectangle[] sourceRectangles;
-        Rectangle playerRect;
-        const int spriteHeight = 64;
-        const int spriteWidth = 48;
-        const int k = 1;
+        public Vector2 position;
+        public byte direction;
+        public Rectangle[] sourceRectangles;
+        public Rectangle playerRect;
+        public const int spriteHeight = 64;
+        public const int spriteWidth = 48;
+        public const int k = 1;
 
-        public void loadPlayerData()
+        public void LoadData()
         {
             sourceRectangles = new Rectangle[8];
             sourceRectangles[0] = new Rectangle(0 * k * spriteWidth, k * spriteHeight,  k * spriteWidth, k * spriteHeight);
