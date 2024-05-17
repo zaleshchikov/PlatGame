@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Class1.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\Class1.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Class1.cs",
+              "RelativeToolTip": "Game3\\MVC\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T07:16:14.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -28,7 +45,7 @@
               "RelativeDocumentMoniker": "Game3\\Game1.cs",
               "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\Game1.cs",
               "RelativeToolTip": "Game3\\Game1.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAiwHAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T07:06:02.184Z",
               "EditorCaption": ""

@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Game3.MVC;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -19,7 +20,7 @@ namespace Game3
         float timer;
         byte direction;
         int threshold;
-        float speed = 2f;
+        float speed = 4f;
         List<Rectangle> Pillarpositions;
         Rectangle[] sourceRectangles;
         Rectangle playerRect;
@@ -30,6 +31,8 @@ namespace Game3
         bool _isJumped;
         byte previousAnimationIndex;
         byte currentAnimationIndex;
+        int[,] env;
+        PlayerModel player;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -39,14 +42,13 @@ namespace Game3
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
 
             base.Initialize();
         }
         private void SetFullscreen()
         {
-             _width = Window.ClientBounds.Width;
-             _height = Window.ClientBounds.Height;
+             _width = (int)(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width*0.93);
+             _height = (int)(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height*0.93);
 
             _graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             _graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
@@ -57,17 +59,40 @@ namespace Game3
 
         protected override void LoadContent()
         {
+
             _spriteBatch = new Microsoft.Xna.Framework.Graphics.SpriteBatch(GraphicsDevice);
             charaset = Content.Load < Texture2D> ("charaset");
-            pillar = Content.Load<Texture2D>("Pillar_01");
+            pillar = Content.Load<Texture2D>("new_pillar_2");
             background = Content.Load<Texture2D>("back_1");
             SetFullscreen();
+            env = new int[(int)(_width / 50)+2, (int)(_height * 2 / 50)+2];
+            for (int i = 0; i < (int)(_width / 50)+2; i++)
+            {
+                for (int j = 0; j < (int)(_height / 50)+2; j++)
+                {
+                    env[i, j] = 0;
+                }
+            }
             Pillarpositions = new List<Rectangle>();
             for (int i = 0; i < 6; i++)
             {
-                Pillarpositions.Add(new Rectangle(_width/3*(i+1), _height * 2-_height/6*i,  pillar.Width, pillar.Height));
+                Pillarpositions.Add(new Rectangle(_width/10*(i+1)+400, _height -_height/10*i-100,  pillar.Width, pillar.Height));
+                for(int l = 0; l< 6; l++)
+                {
+                    env[(int)((_width / 10 * (i + 1)+400) / 50 + l), (int)((_height - _height / 10 * i-100) / 50)] = 1;
+                }
             }
-            Pillarposition = new Vector2(200, _height * 2);
+
+
+            for (int i = 0; i < (int)(_width / 50)+2; i++)
+            {
+                for (int j = 0; j < (int)(_height / 50)+2; j++)
+                {
+                    System.Diagnostics.Debug.Write(env[i, j]);
+                }
+                System.Diagnostics.Debug.WriteLine("");
+            }
+            Pillarposition = new Vector2(200, _height);
             timer = 0;
             direction = 0;
             threshold = 250;
@@ -83,99 +108,109 @@ namespace Game3
             previousAnimationIndex = 5;
             currentAnimationIndex = 4;
             position = new Vector2(100, 100);
+            player = new PlayerModel();
+            player.loadPlayerData();
         }
 
-        protected override void Update(GameTime gameTime)
+        protected void detectKey()
         {
-            KeyboardState keyboardState = Keyboard.GetState();
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            KeyboardState keyboardState = Keyboard.GetState(); if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            var prevPosition = position;
-            if (keyboardState.IsKeyDown(Keys.Left) &&!TouchedRight()) {
-                direction = 3;
-                position.X -= speed; }
-            if (keyboardState.IsKeyDown(Keys.Right) && !TouchedLeft()) {
+            if (keyboardState.IsKeyDown(Keys.Left) && !TouchedRight())
+            {
+                direction = 3; position.X -= speed;
+            }
+            if (keyboardState.IsKeyDown(Keys.Right) && !TouchedLeft())
+            {
                 direction = 0;
-                 position.X += speed; }
+                position.X += speed;
+            }
             if (keyboardState.IsKeyDown(Keys.Up))
             {
                 if (verticalSpeed == 0.0)
                 {
                     _isJumped = true;
-                    verticalSpeed = -2f;
+                    verticalSpeed = -10f;
                 }
             }
-            if (keyboardState.IsKeyDown(Keys.Down) && position.Y <= _height * 2 &&!TouchedTop())
+            if (keyboardState.IsKeyDown(Keys.Down) && position.Y <= _height && !TouchedTop())
             {
-                //position.Y += speed * 3;
             }
+            if (position.X < 0) position.X = 0;
+            if (position.Y < 0) position.Y = 0;
+            if (position.X > _width) position.X = _width;
+            if (position.Y > _height) position.Y = _height;
+        }
 
-            if ((position.Y <= _height * 2 || _isJumped))
-            {
-                if(TouchedTop())System.Diagnostics.Debug.WriteLine(TouchedTop());
-                if (!TouchedTop())
-                {
-                    verticalSpeed += g * 0.001;
-                }
-                if ((!TouchedTop() || verticalSpeed <= 0)) { position.Y += (float)(verticalSpeed); }
-                if (position.Y >= _height * 2 || TouchedTop())
-                {
-                    _isJumped = false;
-                    verticalSpeed = 0.0;
-                }
-            }
-
+        protected void animatePlayer(GameTime gameTime, Vector2 prevPosition)
+        {
             if (timer > threshold && position.X == prevPosition.X)
             {
                 currentAnimationIndex = (byte)(1 + direction);
-                
             }
-
             if (timer > threshold && position.X != prevPosition.X)
             {
-                // If Alex is in the middle sprite of the animation.
                 if (currentAnimationIndex == 1 + direction)
                 {
-                    // If the previous animation was the left-side sprite, then the next animation should be the right-side sprite.
                     if (previousAnimationIndex == direction)
                     {
                         currentAnimationIndex = (byte)(2 + direction);
                     }
                     else
-
-                    // If not, then the next animation should be the left-side sprite.
                     {
                         currentAnimationIndex = direction;
                     }
-
-                    // Track the animation.
                     previousAnimationIndex = currentAnimationIndex;
                 }
-                // If Alex was not in the middle sprite of the animation, he should return to the middle sprite.
                 else
                 {
                     currentAnimationIndex = (byte)(1 + direction);
                 }
-
-                // Reset the timer.
-                if (position.X < 0)
-                    position.X = 0;
-                if (position.Y < 0)
-                    position.Y = 0;
-                if (position.X > _width * 2.5)
-                    position.X = _width * 2.5f;
-                if (position.Y > _height * 2)
-                    position.Y = _height * 2;
+                
                 timer = 0;
             }
-            // If the timer has not reached the threshold, then add the milliseconds that have past since the last Update() to the timer.
             else
             {
                 timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             }
+        }
 
+        protected void addPhysics()
+        {
 
+            if ((position.Y <= _height - playerRect.Height/1.3  || _isJumped))
+            {
+                if (!TouchedTop())
+                {
+                    verticalSpeed += g * 0.03;
+                }
+                if ((!TouchedTop() || verticalSpeed <= 0))
+                {
+                    if (TouchedBottom())
+                    {
+                        if(verticalSpeed < 0) { verticalSpeed = -verticalSpeed; }
+                        position.Y += (float)(verticalSpeed);
+                        _isJumped = false;
+                    }
+                    else
+                    {
+                        position.Y += (float)(verticalSpeed);
+                    }
+                }
+                if (position.Y >= _height - playerRect.Height/1.3 || TouchedTop())
+                {
+                    _isJumped = false;
+                    verticalSpeed = 0.0;
+                }
+            }
+        }
+
+        protected override void Update(GameTime gameTime)
+        {
+            var prevPosition = position;
+            detectKey();
+            animatePlayer(gameTime, prevPosition);
+            addPhysics();
             playerRect = new Rectangle((int)position.X, (int)position.Y, 48, 64);
             base.Update(gameTime);
         }
@@ -184,51 +219,23 @@ namespace Game3
 
         protected bool TouchedLeft()
         {
-            foreach (var pillarRect in Pillarpositions)
-            {
-                if(playerRect.Right == pillarRect.Left && playerRect.Bottom >= pillarRect.Top && playerRect.Bottom <= pillarRect.Bottom)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return env[(int)(position.X / 50) + 1, (int)(position.Y / 50)] == 1;
         }
 
         protected bool TouchedRight()
         {
-            foreach (var pillarRect in Pillarpositions)
-            {
-                if (playerRect.Left == pillarRect.Right && playerRect.Bottom >= pillarRect.Top && playerRect.Bottom <= pillarRect.Bottom)
-                {
-                    return true;
-                }
-            }
-            return false;
-
+            return env[(int)(position.X / 50) - 1, (int)(position.Y / 50)] == 1;
         }
 
         protected bool TouchedTop()
         {
-            foreach (var pillarRect in Pillarpositions)
-            {
-                if (playerRect.Bottom == pillarRect.Top && playerRect.Right >= pillarRect.Left && playerRect.Left <= pillarRect.Right)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return env[(int)(position.X / 50), (int)(position.Y / 50)+1] == 1;
         }
 
         protected bool TouchedBottom()
         {
-            foreach (var pillarRect in Pillarpositions)
-            {
-                if (playerRect.Top == pillarRect.Bottom && playerRect.Right >= pillarRect.Left && playerRect.Left <= pillarRect.Right)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return env[(int)(position.X / 50), (int)(position.Y / 50)] == 1;
+
         }
 
         protected override void Draw(GameTime gameTime)
@@ -246,6 +253,51 @@ namespace Game3
             _spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+    }
+}
+
+public enum GameStates
+{ // Just for readability
+    Menu,
+    Playing,
+    Paused,
+    GameOver
+}
+
+public class GameSession
+{
+
+    GameStates _state = GameStates.Menu;
+
+    public void SetGameState(GameStates state)
+    {
+
+        if (state != _state)
+        {
+            _state = state;
+            switch (state)
+            {
+                case GameStates.Menu:
+                    // Show menu window or overlay here if not already open
+                    // Pause game world time flow
+                    // Start potential transitions here
+                    break;
+                case GameStates.Playing:
+                    // Resume game world time flow
+                    break;
+                case GameStates.Paused:
+                    // Pause game world time flow
+                    // Maybe show game paused UI
+                    break;
+                case GameStates.GameOver:
+                    // Show game over screen or overlay
+                    // Pause game world time flow (not strictly)
+                    // Any interaction from player leads to state e.g. GameStates.Menu
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
