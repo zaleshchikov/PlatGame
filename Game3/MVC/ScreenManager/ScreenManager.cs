@@ -15,6 +15,8 @@ namespace Game3.MVC.ScreenManager
     public class ScreenManager
     {
         public GameScreen currentScreen;
+        int currentScreenIndex = 0;
+        List<GameScreen> screens = new List<GameScreen>() { new MainMenuScreen(), new FirstLevelScreen(), new SecondLevelScreen()};
 
         public void checkingChangeScreen(GameScreen newScreen, GraphicsDeviceManager _graphicsDeviceManager, ContentManager content, GraphicsDevice graphicsDevice)
         {
@@ -31,7 +33,12 @@ namespace Game3.MVC.ScreenManager
             {
                 currentScreen.UnloadContent();
             }
-            currentScreen = newScreen;
+            currentScreenIndex++;
+            if(currentScreenIndex >= 3)
+            {
+                return;
+            }
+            currentScreen = screens[currentScreenIndex];
             currentScreen.Initialize();
             currentScreen.Game(_graphicsDeviceManager);
             currentScreen.LoadContent(content, graphicsDevice);

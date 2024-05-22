@@ -112,7 +112,7 @@ namespace Game3.MVC
                 {
                     if (TouchedBottom())
                     {
-                        if (verticalSpeed < 0) { verticalSpeed = -verticalSpeed; }
+                        if (verticalSpeed < 0) { verticalSpeed = 1f; }
                         player.position.Y += (float)(verticalSpeed);
                         _isJumped = false;
                     }

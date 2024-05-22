@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Game3.MVC.Screens
 {
-    public class LevelScreen : GameScreen
+    public class FirstLevelScreen : GameScreen
     {
          PlayerModel player;
         EnviromentModel enviroment;

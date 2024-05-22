@@ -36,7 +36,7 @@ namespace Game3
         }
         protected override void Update(GameTime gameTime)
         {
-            screenManager.checkingChangeScreen(new LevelScreen(), _graphicsDeviceManager, Content, GraphicsDevice);
+            screenManager.checkingChangeScreen(new FirstLevelScreen(), _graphicsDeviceManager, Content, GraphicsDevice);
             screenManager.currentScreen.Update(gameTime);
             base.Update(gameTime);
         }
