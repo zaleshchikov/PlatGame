@@ -7,36 +7,48 @@
       "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\gameview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\screens\\gamescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\screenmanager\\screenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\screenmanager\\screenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\menumvc\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\menumvc\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|C:\\Users\\Alexander\\source\\repos\\Game3\\game3\\mvc\\screens\\gamescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\screens\\gamescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\screens\\levelscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\levelmvc\\enviromentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\levelmvc\\enviromentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|C:\\Users\\Alexander\\source\\repos\\Game3\\game3\\mvc\\screens\\levelscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\screens\\levelscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|C:\\Users\\Alexander\\source\\repos\\Game3\\game3\\mvc\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\menumvc\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\menumvc\\menuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\screens\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\screens\\mainmenuscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|C:\\Users\\Alexander\\source\\repos\\Game3\\game3\\mvc\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\levelmvc\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\levelmvc\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|C:\\Users\\Alexander\\source\\repos\\Game3\\game3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|C:\\Users\\Alexander\\source\\repos\\Game3\\game3\\mvc\\enviromentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\enviromentmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\menumvc\\menumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\menumvc\\menumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|C:\\Users\\Alexander\\source\\repos\\Game3\\game3\\mvc\\playermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\playermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|c:\\users\\alexander\\source\\repos\\game3\\game3\\mvc\\levelmvc\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2FE8E66-D63C-4245-87FA-C762F8BA3653}|Game3\\Game3.csproj|solutionrelative:game3\\mvc\\levelmvc\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,12 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -60,113 +68,158 @@
               "RelativeDocumentMoniker": "Game3\\GameView.cs",
               "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\GameView.cs",
               "RelativeToolTip": "Game3\\GameView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAfAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T07:06:02.184Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScreenManager.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\ScreenManager\\ScreenManager.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\ScreenManager\\ScreenManager.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\ScreenManager\\ScreenManager.cs",
+              "RelativeToolTip": "Game3\\MVC\\ScreenManager\\ScreenManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T05:22:31.275Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\MenuMVC\\MenuController.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\MenuMVC\\MenuController.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\MenuMVC\\MenuController.cs",
+              "RelativeToolTip": "Game3\\MVC\\MenuMVC\\MenuController.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAswCAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T04:30:17.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnviromentModel.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\LevelMVC\\EnviromentModel.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\LevelMVC\\EnviromentModel.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\LevelMVC\\EnviromentModel.cs",
+              "RelativeToolTip": "Game3\\MVC\\LevelMVC\\EnviromentModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T04:07:51.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\LevelMVC\\Controller.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\LevelMVC\\Controller.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\LevelMVC\\Controller.cs",
+              "RelativeToolTip": "Game3\\MVC\\LevelMVC\\Controller.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAACcAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T04:04:26.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainMenuScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Screens\\MainMenuScreen.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\Screens\\MainMenuScreen.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Screens\\MainMenuScreen.cs",
+              "RelativeToolTip": "Game3\\MVC\\Screens\\MainMenuScreen.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAnwCwAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T04:02:48.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "LevelScreen.cs",
               "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Screens\\LevelScreen.cs",
               "RelativeDocumentMoniker": "Game3\\MVC\\Screens\\LevelScreen.cs",
               "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Screens\\LevelScreen.cs",
               "RelativeToolTip": "Game3\\MVC\\Screens\\LevelScreen.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAtwDEAAAAMAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T23:48:49.767Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
+              "Title": "MenuModel.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\MenuMVC\\MenuModel.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\MenuMVC\\MenuModel.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\MenuMVC\\MenuModel.cs",
+              "RelativeToolTip": "Game3\\MVC\\MenuMVC\\MenuModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T03:58:04.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MenuView.cs",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\MenuMVC\\MenuView.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\MenuMVC\\MenuView.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\MenuMVC\\MenuView.cs",
+              "RelativeToolTip": "Game3\\MVC\\MenuMVC\\MenuView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T03:47:10.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "GameScreen.cs",
               "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Screens\\GameScreen.cs",
               "RelativeDocumentMoniker": "Game3\\MVC\\Screens\\GameScreen.cs",
               "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Screens\\GameScreen.cs",
               "RelativeToolTip": "Game3\\MVC\\Screens\\GameScreen.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA8AAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T23:48:49.152Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainMenuScreen.cs",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Screens\\MainMenuScreen.cs",
-              "RelativeDocumentMoniker": "Game3\\MVC\\Screens\\MainMenuScreen.cs",
-              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Screens\\MainMenuScreen.cs",
-              "RelativeToolTip": "Game3\\MVC\\Screens\\MainMenuScreen.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T23:48:49.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "View.cs",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\View.cs",
-              "RelativeDocumentMoniker": "Game3\\MVC\\View.cs",
-              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\View.cs",
-              "RelativeToolTip": "Game3\\MVC\\View.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwDAAAAAMAAAA",
+              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\LevelMVC\\View.cs",
+              "RelativeDocumentMoniker": "Game3\\MVC\\LevelMVC\\View.cs",
+              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\LevelMVC\\View.cs",
+              "RelativeToolTip": "Game3\\MVC\\LevelMVC\\View.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwEcAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T20:38:39.525Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\Program.cs",
               "RelativeDocumentMoniker": "Game3\\Program.cs",
               "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\Program.cs",
               "RelativeToolTip": "Game3\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-17T09:06:43.367Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Controller.cs",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Controller.cs",
-              "RelativeDocumentMoniker": "Game3\\MVC\\Controller.cs",
-              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\Controller.cs",
-              "RelativeToolTip": "Game3\\MVC\\Controller.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAkwEYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T08:15:32.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EnviromentModel.cs",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\EnviromentModel.cs",
-              "RelativeDocumentMoniker": "Game3\\MVC\\EnviromentModel.cs",
-              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\EnviromentModel.cs",
-              "RelativeToolTip": "Game3\\MVC\\EnviromentModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T07:48:26.998Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PlayerModel.cs",
-              "DocumentMoniker": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\PlayerModel.cs",
-              "RelativeDocumentMoniker": "Game3\\MVC\\PlayerModel.cs",
-              "ToolTip": "C:\\Users\\Alexander\\source\\repos\\Game3\\Game3\\MVC\\PlayerModel.cs",
-              "RelativeToolTip": "Game3\\MVC\\PlayerModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T07:16:14.674Z"
             }
           ]
         }

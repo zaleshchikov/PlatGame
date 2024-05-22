@@ -42,3 +42,13 @@ C:\Users\Alexander\source\repos\Game3\Game3\obj\Debug\net6.0-windows\Game3.sourc
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\Pillar_01.xnb
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\new_pillar.xnb
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\new_pillar_2.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\menu_back.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\play.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b1.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b2.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b3.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b4.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b5.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b6.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b7.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b8.xnb
