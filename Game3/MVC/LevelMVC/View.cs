@@ -19,7 +19,7 @@ namespace Game3.MVC
         Texture2D background;
         private GraphicsDeviceManager _graphics;
         PlayerModel player;
-        EnviromentModel enviroment;
+        EnvironmentViewData enviroment;
         Controller controller;
         private Microsoft.Xna.Framework.Graphics.SpriteBatch _spriteBatch;
 
@@ -31,7 +31,7 @@ namespace Game3.MVC
             _graphics.ApplyChanges();
         }
         public void LoadData(ContentManager content, PlayerModel player,
-        EnviromentModel enviroment,
+        EnvironmentViewData enviroment,
         Controller controller, GraphicsDevice graphicsDevice)
         {
             _spriteBatch = new Microsoft.Xna.Framework.Graphics.SpriteBatch(graphicsDevice);
@@ -74,7 +74,7 @@ namespace Game3.MVC
 
         public void DrawPillars()
         {
-            foreach (var pos in enviroment.Pillarpositions)
+            foreach (var pos in enviroment.PillarPositions)
             {
                 _spriteBatch.Draw(pillar, pos, Color.White);
             }

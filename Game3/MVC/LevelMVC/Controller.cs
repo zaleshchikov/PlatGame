@@ -5,13 +5,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using Game3.MVC.Screens;
 
 namespace Game3.MVC
 {
-    internal class Controller
+    internal class Controller : Microsoft.Xna.Framework.Game
     {
         PlayerModel player;
-        EnviromentModel enviroment;
+        EnvironmentViewData enviroment;
         public float timer;
         public int threshold;
         public float speed;
@@ -20,8 +23,10 @@ namespace Game3.MVC
         public bool _isJumped;
         public byte previousAnimationIndex;
         public byte currentAnimationIndex;
+        ScreenManager.ScreenManager screenManager;
 
-        public void LoadData(PlayerModel player, EnviromentModel enviroment)
+
+        public void LoadData(PlayerModel player, EnvironmentViewData enviroment, ScreenManager.ScreenManager screenManager)
         {
             speed = 4f;
             verticalSpeed = 0;
@@ -33,11 +38,15 @@ namespace Game3.MVC
             currentAnimationIndex = 4;
             _isJumped = false;
             this.enviroment = enviroment;
+            this.screenManager = screenManager;
         }
 
         public void detectKey()
         {
             KeyboardState keyboardState = Keyboard.GetState();
+
+            //if (keyboardState.IsKeyDown(Keys.Enter)){
+            //    screenManager.ChangeScreen(new SecondLevelScreen());}
 
             if (keyboardState.IsKeyDown(Keys.Left) && !TouchedRight())
             {
@@ -63,6 +72,14 @@ namespace Game3.MVC
             if (player.position.Y < 0) player.position.Y = 0;
             if (player.position.X > enviroment.Width) player.position.X = enviroment.Width;
             if (player.position.Y > enviroment.Height) player.position.Y = enviroment.Height;
+        }
+
+       public void checkIsEnd()
+        {
+            if (enviroment.env[(int)(player.position.X / 50) + 1, (int)(player.position.Y / 50)] == 2) {
+                screenManager.ChangeScreen(new SecondLevelScreen());
+            }
+            
         }
 
 

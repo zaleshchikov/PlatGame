@@ -16,32 +16,30 @@ namespace Game3.MVC.ScreenManager
     {
         public GameScreen currentScreen;
         int currentScreenIndex = 0;
+        GraphicsDeviceManager _graphicsDeviceManager;
+        ContentManager _content;
+        GraphicsDevice _graphicsDevice;
+
+        public void LoadData(GraphicsDeviceManager graphicsDeviceManager, ContentManager content, GraphicsDevice graphicsDevice)
+        {
+            _graphicsDevice = graphicsDevice;
+            _content = content;
+            _graphicsDeviceManager = graphicsDeviceManager;
+        }
+
         List<GameScreen> screens = new List<GameScreen>() { new MainMenuScreen(), new FirstLevelScreen(), new SecondLevelScreen()};
 
-        public void checkingChangeScreen(GameScreen newScreen, GraphicsDeviceManager _graphicsDeviceManager, ContentManager content, GraphicsDevice graphicsDevice)
-        {
-            KeyboardState keyboardState = Keyboard.GetState();
-            if (keyboardState.IsKeyDown(Keys.Enter))
-            {
-                ChangeScreen(newScreen, _graphicsDeviceManager, content, graphicsDevice);
-            }
-
-        }
-        public void ChangeScreen(GameScreen newScreen, GraphicsDeviceManager _graphicsDeviceManager, ContentManager content, GraphicsDevice graphicsDevice)
+        public void ChangeScreen(GameScreen newScreen)
         {
             if (currentScreen != null)
             {
                 currentScreen.UnloadContent();
             }
-            currentScreenIndex++;
-            if(currentScreenIndex >= 3)
-            {
-                return;
-            }
-            currentScreen = screens[currentScreenIndex];
+
+            currentScreen = newScreen;
             currentScreen.Initialize();
             currentScreen.Game(_graphicsDeviceManager);
-            currentScreen.LoadContent(content, graphicsDevice);
+            currentScreen.LoadContent(_content, _graphicsDevice, this);
         }
     }
 }

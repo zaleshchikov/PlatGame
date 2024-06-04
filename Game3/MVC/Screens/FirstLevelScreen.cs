@@ -13,7 +13,7 @@ namespace Game3.MVC.Screens
     public class FirstLevelScreen : GameScreen
     {
          PlayerModel player;
-        EnviromentModel enviroment;
+        EnvironmentViewData enviroment;
         Controller controller;
         View view;
         public override void Initialize()
@@ -27,15 +27,15 @@ namespace Game3.MVC.Screens
             view.StartGame(_graphics);
         }
 
-        public override void LoadContent(ContentManager content, GraphicsDevice graphicsDevice)
+        public override void LoadContent(ContentManager content, GraphicsDevice graphicsDevice, ScreenManager.ScreenManager screenManager)
         {
-            enviroment = new EnviromentModel();
+            enviroment = new EnvironmentViewData();
             player = new PlayerModel();
             controller = new Controller();
             player.LoadData();
             enviroment.LoadData();
             enviroment.LoadPillarPositionFirstLevel();
-            controller.LoadData(player, enviroment);
+            controller.LoadData(player, enviroment, screenManager);
             view.LoadData(content, player, enviroment, controller, graphicsDevice);
             view.SetFullscreen();
         }
@@ -48,6 +48,7 @@ namespace Game3.MVC.Screens
         public override void Update(GameTime gameTime)
         {
             var prevPosition = player.position;
+            controller.checkIsEnd();
             controller.detectKey();
             controller.animatePlayer(gameTime, prevPosition);
             controller.addPhysics();

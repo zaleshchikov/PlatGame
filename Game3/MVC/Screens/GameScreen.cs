@@ -16,7 +16,7 @@ namespace Game3.MVC.Screens
 
         public abstract void Game(GraphicsDeviceManager _graphics);
 
-        public abstract void LoadContent(ContentManager content, GraphicsDevice graphicsDevice);
+        public abstract void LoadContent(ContentManager content, GraphicsDevice graphicsDevice, ScreenManager.ScreenManager screenManager);
         public abstract void UnloadContent();
         public abstract void Update(GameTime gameTime);
         public abstract void Draw(GameTime gameTime);

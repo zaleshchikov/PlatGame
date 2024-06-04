@@ -12,7 +12,6 @@ namespace Game3
 {
     public class Game : Microsoft.Xna.Framework.Game
     {
-
         GraphicsDeviceManager _graphicsDeviceManager;
         ScreenManager screenManager;
         public Game()
@@ -32,11 +31,13 @@ namespace Game3
 
         protected override void LoadContent()
         {
-            screenManager.currentScreen.LoadContent(Content, GraphicsDevice);
+            screenManager.LoadData(_graphicsDeviceManager, Content, GraphicsDevice);
+            screenManager.currentScreen.LoadContent(Content, GraphicsDevice, screenManager);
         }
         protected override void Update(GameTime gameTime)
         {
-            screenManager.checkingChangeScreen(new FirstLevelScreen(), _graphicsDeviceManager, Content, GraphicsDevice);
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
             screenManager.currentScreen.Update(gameTime);
             base.Update(gameTime);
         }

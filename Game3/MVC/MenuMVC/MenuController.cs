@@ -1,7 +1,13 @@
-﻿using Microsoft.Xna.Framework.Input;
+﻿using Game3.MVC.ScreenManager;
+using Game3.MVC.Screens;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,28 +16,23 @@ namespace Game3.MVC.MenuMVC
     public class MenuController
     {
         MenuModel menuModel;
+        ScreenManager.ScreenManager screenManager;
 
-        public void LoadData(MenuModel menuModel)
+
+        public void LoadData(MenuModel menuModel, ScreenManager.ScreenManager screenManager)
         {
             this.menuModel = menuModel;
+            this.screenManager = screenManager;
+
         }
 
         public void detectKey()
         {
             KeyboardState keyboardState = Keyboard.GetState();
-            MouseState mouseState = Mouse.GetState();
-            //System.Diagnostics.Debug.WriteLine(mouseState.X);
-            if (mouseState.X >= menuModel.StartButtonPosition.X || 
-               //mouseState.X <= menuModel.StartButtonPosition.X + menuModel.StartButtonWidth && 
-               //mouseState.Y >= menuModel.StartButtonPosition.Y && 
-               //mouseState.Y <= menuModel.StartButtonPosition.Y || 
-               mouseState.LeftButton == ButtonState.Pressed)
-            {
-                System.Diagnostics.Debug.WriteLine("Mouse clicked");
-            }
+
             if (keyboardState.IsKeyDown(Keys.Enter))
             {
-                System.Diagnostics.Debug.WriteLine("Enter clicked");
+                screenManager.ChangeScreen(new FirstLevelScreen());
             }
         }
     }

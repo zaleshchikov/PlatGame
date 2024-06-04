@@ -18,6 +18,7 @@ namespace Game3.MVC.Screens
         MenuController menuController;
         public override void Initialize()
         {
+
         }
 
         public override void Game(GraphicsDeviceManager _graphics)
@@ -26,18 +27,19 @@ namespace Game3.MVC.Screens
             menuView.StartGame(_graphics);
         }
 
-        public override void LoadContent(ContentManager content, GraphicsDevice graphicsDevice)
+        public override void LoadContent(ContentManager content, GraphicsDevice graphicsDevice, ScreenManager.ScreenManager screenManager)
         {
             menuModel = new MenuModel();
             menuController = new MenuController();
             menuModel.LoadData();
-            menuController.LoadData(menuModel);
+            menuController.LoadData(menuModel, screenManager);
             menuView.LoadData(content, graphicsDevice, menuModel);
             menuView.SetFullscreen();
         }
 
         public override void UnloadContent()
         {
+
         }
 
         public override void Update(GameTime gameTime)
