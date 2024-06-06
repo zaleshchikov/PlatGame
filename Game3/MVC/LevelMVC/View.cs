@@ -16,6 +16,7 @@ namespace Game3.MVC
     {
         Texture2D charaset;
         Texture2D pillar;
+        Texture2D finalPillar;
         Texture2D background;
         private GraphicsDeviceManager _graphics;
         PlayerModel player;
@@ -38,6 +39,7 @@ namespace Game3.MVC
             this._spriteBatch = _spriteBatch;
             charaset = content.Load<Texture2D>("charaset");
             pillar = content.Load<Texture2D>("new_pillar_2");
+            finalPillar = content.Load<Texture2D>("final_pillar_1");
             background = content.Load<Texture2D>("back_1");
             this.player = player;
             this.enviroment = enviroment;
@@ -76,7 +78,14 @@ namespace Game3.MVC
         {
             foreach (var pos in enviroment.PillarPositions)
             {
-                _spriteBatch.Draw(pillar, pos, Color.White);
+                if (pos == enviroment.PillarPositions.Last())
+                {
+                    _spriteBatch.Draw(finalPillar, pos, Color.White);
+                }
+                else
+                {
+                    _spriteBatch.Draw(pillar, pos, Color.White);
+                }
             }
         }
     }

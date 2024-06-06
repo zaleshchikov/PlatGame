@@ -59,9 +59,9 @@ namespace Game3.MVC
                     env[(int)((_width / distanceK * (i + 1) + levelStartX) / tileSize + l), (int)((_height - _height / distanceK * i - levelStartY) / tileSize)] = 1;
                     if(i == 5)
                     {
-                        for (int k = 0; k <= (int)(doorHeight/tileSize); k++)
+                        for (int k = 1; k <= (int)(doorHeight/tileSize); k++)
                         {
-                            env[(int)((_width / distanceK * (i + 1) + levelStartX) / tileSize + l), (int)((_height - _height / distanceK * i - levelStartY) / tileSize+k)] = 2;
+                            env[(int)((_width / distanceK * (i + 1) + levelStartX) / tileSize + l), (int)((_height - _height / distanceK * i - levelStartY) / tileSize-k)] = 2;
                         }
                     }
                 }

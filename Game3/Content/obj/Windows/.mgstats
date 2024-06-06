@@ -1,9 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Alexander/source/repos/Game3/Game3/Content/b1.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/b1.xnb","TextureProcessor","Texture2DContent",61075,11944021,0,516636
-"C:/Users/Alexander/source/repos/Game3/Game3/Content/b2.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/b2.xnb","TextureProcessor","Texture2DContent",57084,11944021,0,2554527
-"C:/Users/Alexander/source/repos/Game3/Game3/Content/b3.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/b3.xnb","TextureProcessor","Texture2DContent",39224,11944021,0,306236
-"C:/Users/Alexander/source/repos/Game3/Game3/Content/b4.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/b4.xnb","TextureProcessor","Texture2DContent",44315,11944021,0,1917182
-"C:/Users/Alexander/source/repos/Game3/Game3/Content/b5.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/b5.xnb","TextureProcessor","Texture2DContent",80093,11944021,0,2087873
-"C:/Users/Alexander/source/repos/Game3/Game3/Content/b6.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/b6.xnb","TextureProcessor","Texture2DContent",14178,746581,0,0143411
-"C:/Users/Alexander/source/repos/Game3/Game3/Content/b7.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/b7.xnb","TextureProcessor","Texture2DContent",81425,11944021,0,2363236
-"C:/Users/Alexander/source/repos/Game3/Game3/Content/b8.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/b8.xnb","TextureProcessor","Texture2DContent",62949,11944021,0,2167885
+"C:/Users/Alexander/source/repos/Game3/Game3/Content/menu_text.png","C:/Users/Alexander/source/repos/Game3/Game3/Content/bin/Windows/menu_text.xnb","TextureProcessor","Texture2DContent",188839,2931481,0,1343177

@@ -12,20 +12,10 @@ namespace Game3.MVC.MenuMVC
     {
         public Vector2 BackgroundPosition;
         public Vector2 StartButtonPosition;
+        public Vector2 TextPosition;
         int _height;
         int _width;
-        private int startButtonWidth;
 
-        private int startButtonHeight;
-
-        public int StartButtonWidth {
-            get => startButtonWidth;
-        }
-
-        public int StartButtonHeight
-        {
-            get => startButtonHeight;
-        }
 
 
 
@@ -35,13 +25,9 @@ namespace Game3.MVC.MenuMVC
             _height = (int)(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height * 0.93);
             BackgroundPosition = new Vector2(0, 0);
             StartButtonPosition = new Vector2(_width/2, _height/2);
+            TextPosition = new Vector2(_width / 5, _height / 3 * 2);
             System.Diagnostics.Debug.WriteLine(StartButtonPosition.X);
         }
 
-        public void setButtonsize(int width, int height)
-        {
-            startButtonWidth = width;
-            startButtonHeight = height;
-        }
     }
 }

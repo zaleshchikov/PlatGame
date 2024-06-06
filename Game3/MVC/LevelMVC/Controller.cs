@@ -45,8 +45,6 @@ namespace Game3.MVC
         {
             KeyboardState keyboardState = Keyboard.GetState();
 
-            //if (keyboardState.IsKeyDown(Keys.Enter)){
-            //    screenManager.ChangeScreen(new SecondLevelScreen());}
 
             if (keyboardState.IsKeyDown(Keys.Left) && !TouchedRight())
             {
@@ -65,9 +63,7 @@ namespace Game3.MVC
                     verticalSpeed = -10f;
                 }
             }
-            if (keyboardState.IsKeyDown(Keys.Down) && player.position.Y <= enviroment.Height && !TouchedTop())
-            {
-            }
+           
             if (player.position.X < 0) player.position.X = 0;
             if (player.position.Y < 0) player.position.Y = 0;
             if (player.position.X > enviroment.Width) player.position.X = enviroment.Width;
@@ -76,7 +72,7 @@ namespace Game3.MVC
 
        public void checkIsEnd()
         {
-            if (enviroment.env[(int)(player.position.X / 50) + 1, (int)(player.position.Y / 50)] == 2) {
+            if (enviroment.env[(int)(player.position.X / 50) + 1, (int)(player.position.Y / 50)] == 2 && TouchedTop()) {
                 screenManager.ChangeScreen(new SecondLevelScreen());
             }
             
@@ -155,6 +151,10 @@ namespace Game3.MVC
 
         protected bool TouchedRight()
         {
+            if ((int)(player.position.X / 50) - 1 < 0)
+            {
+                return false;
+            }
             return enviroment.env[(int)(player.position.X / 50) - 1, (int)(player.position.Y / 50)] == 1;
         }
 

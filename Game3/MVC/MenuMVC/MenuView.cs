@@ -32,6 +32,7 @@ namespace Game3.MVC.MenuMVC
         }
 
         Texture2D menuBack;
+        Texture2D menuText;
         Texture2D button;
         private Microsoft.Xna.Framework.Graphics.SpriteBatch _spriteBatch;
         private GraphicsDeviceManager _graphics;
@@ -42,14 +43,15 @@ namespace Game3.MVC.MenuMVC
             this.menuModel = menuModel;
             _spriteBatch = new Microsoft.Xna.Framework.Graphics.SpriteBatch(graphicsDevice);
             menuBack = content.Load<Texture2D>("b3");
+            menuText = content.Load<Texture2D>("menu_text");
             button = content.Load<Texture2D>("play");
-            menuModel.setButtonsize(button.Width, button.Height);
         }
 
         public void DrawMenu(GameTime gameTime)
         {
             _spriteBatch.Begin();
             _spriteBatch.Draw(menuBack, menuModel.BackgroundPosition, Color.White);
+            _spriteBatch.Draw(menuText, menuModel.TextPosition, Color.White);
             _spriteBatch.Draw(button, menuModel.StartButtonPosition, Color.White);
             _spriteBatch.End();
             base.Draw(gameTime);

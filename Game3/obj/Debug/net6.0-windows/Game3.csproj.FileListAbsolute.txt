@@ -52,3 +52,9 @@ C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b5.
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b6.xnb
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b7.xnb
 C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b8.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\final_pillar_1.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\final_pillar_2.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\final_pillar_3.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\b33.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\back_with_text.xnb
+C:\Users\Alexander\source\repos\Game3\Game3\bin\Debug\net6.0-windows\Content\menu_text.xnb

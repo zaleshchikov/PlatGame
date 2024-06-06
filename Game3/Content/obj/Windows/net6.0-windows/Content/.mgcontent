@@ -7,21 +7,33 @@
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b1.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b2.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b3.png</File>
+    <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b33.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b4.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b5.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b6.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b7.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/b8.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/back_1.jpg</File>
+    <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/back_with_text.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/charaset-2.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/charaset.png</File>
+    <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/final_pillar_1.png</File>
+    <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/final_pillar_2.png</File>
+    <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/final_pillar_3.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/menu_back.png</File>
+    <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/menu_text.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/new_pillar_2.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/new_pillar.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/Pillar_01.png</File>
     <File>C:/Users/Alexander/source/repos/Game3/Game3/Content/play.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
